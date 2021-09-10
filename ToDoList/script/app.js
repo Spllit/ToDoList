@@ -6,11 +6,12 @@ const btnDelete = document.getElementsByClassName('task__delete')
 const checkbox = document.getElementsByClassName('checkbox__input')
 let activeTasks = []
 
-window.onload = fillTaskCard(activeCardHolder, 'activeTasks')
+// window.onload = fillTaskCard(activeCardHolder, 'activeTasks')
 
 button.addEventListener('click', () => {
     if(input.value.length > 0){
         activeTasks.push(new Task(input.value, false))
+        console.log(activeTasks)
         updateLocalStorage('activeTasks', activeTasks) 
         fillTaskCard(activeCardHolder, 'activeTasks')
         input.value = ''
